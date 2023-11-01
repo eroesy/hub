@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elter-hub</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- inicio -->
+        <div class="navbar">
+            <div class="logo">
+                <h1><a href="/" style="color: white;">elter-hub</a></h1>
+            </div>
+            <div class="resto">
+                <p><a href="/">form</a></p>
+                <p><a href="/media">images</a></p>
+            </div>
+        </div>
+
+        <!-- conteudo -->
+        <div class="form" id="myForm">
+            <form action="/api/" method="post" enctype="multipart/form-data">
+                <input type="text" name="name" id="" placeholder="file name" required>
+                <input type="file" name="file" id="file">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

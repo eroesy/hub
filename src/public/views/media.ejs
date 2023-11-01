@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elter-hub</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- inicio -->
+        <div class="navbar">
+            <div class="logo">
+                <h1><a href="/" style="color: white;">elter-hub</a></h1>
+            </div>
+            <div class="resto">
+                <p><a href="/">form</a></p>
+                <p><a href="/media">images</a></p>
+                <p class="limpar">limpar</p>
+            </div>
+        </div>
+
+        <!-- conteudo -->
+        <div class="images">
+            <% images.map((img, id) => { %>
+                <% console.log(img.name) %>
+                <% const is_mp4 = img.format == "mp4"; %>
+                <% if (is_mp4) { %>
+                    <video src="data:video/mp4;base64, <%- img.data %>" alt="<%- img.name %>" controls=""></video>
+                <% } else { %>
+                    <img src="data:image/png;base64, <%- img.data %>" alt="<%- img.name %>"></img>
+                <% } %>
+            <% }) %>
+        </div>
+
+    </div>
+
+    <script src="js/update_imgs.js"></script>
+</body>
+</html>

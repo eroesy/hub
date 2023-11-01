@@ -1,0 +1,115 @@
+* {
+    font-family: Arial;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 7%;
+    background-color: rgb(24, 24, 24);
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    flex-basis: 90%;
+}
+
+.logo > h1 {
+    color: white;
+    font-size: 20px;
+    margin-left: 2%;
+}
+
+.resto {
+    display: flex;
+}
+
+.resto > p{
+    background-color: rgb(251, 255, 0);
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    width: 60%;
+    height: 80%;
+    background-color: rgb(240, 241, 228);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 3%;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: rgb(24, 24, 24);
+}
+
+form > button {
+    width: 50%;
+    height: 5%;
+    margin-top: 20px;
+}
+
+form > label {
+    color: white;
+}
+
+input {
+    margin-top: 20px;
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+#file {
+    color: white;
+}
+
+.images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: rgb(201, 201, 201);
+    box-shadow: 0px 0px 6px rgba(255, 255, 178, 0.76);
+}
+
+.images > img, .images > video {
+    width: 20%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
