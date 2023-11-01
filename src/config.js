@@ -1,18 +1,21 @@
-// BASIC IMPORTS
 const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
+const fs = require("node:fs");
 
-// VARIABLES
 const ABS_PATH = path.resolve(__dirname, "..", ".env");
 const valid_formats = ['jpg', 'png', 'jpeg', 'gif', 'mp4'];
 
-// 8====D
+fs.access(path.resolve("src", "uploads"), (err) => {
+    if (err) {
+        fs.mkdirSync(path.resolve("src", "uploads"));
+    }
+});
+
 require("dotenv").config({
     path: ABS_PATH
 });
 
-// MAIN THINGS
 const initialize_db = async () => {
     return mongoose.connect(process.env.DATABASE);
 };

@@ -98,18 +98,33 @@ input {
     display: flex;
     width: 100%;
     height: 100%;
-    flex-direction: column;
     background-color: rgb(201, 201, 201);
     box-shadow: 0px 0px 6px rgba(255, 255, 178, 0.76);
-}
-
-.images > img, .images > video {
-    width: 20%;
-    margin-left: 10px;
-    margin-top: 10px;
 }
 
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+.content {
+    display: flex;
+    max-width: 30%;
+    max-height: 35%;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 0, 0.733);
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.content img, .content > video {
+    display: block;
+    height: auto;
+    max-width: 90%;
+    max-height: 100%;
+    margin-top: 10px;
 }

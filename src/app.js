@@ -24,7 +24,6 @@ initialize_db().then(() => {
     console.log("servidor iniciado");
 });
 
-// FRONT-END ROUTES
 app.get("/", (req, res) => {
     res.render("index.ejs");
 });
@@ -40,7 +39,16 @@ app.get("/media", async (req, res) => {
     }
 });
 
-// API ROUTES
+app.get("/media/:id", async (req, res) => {
+    try {
+        const image = await Image.findById({_id: req.params.id})
+        res.render("post.ejs", { image });
+    } catch(err) {
+        console.log(err);
+        res.send("ocorreu um erro");
+    }
+});
+
 app.post("/api", upload.single('file'), async (req, res) => {
 
     try {
@@ -55,7 +63,7 @@ app.post("/api", upload.single('file'), async (req, res) => {
         }
 
         const new_image = new Image({
-            name: req.file.filename,
+            name: req.body.name,
             data: Buffer.from(image).toString("base64"),
             format: ext
         });
