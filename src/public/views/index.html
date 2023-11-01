@@ -24,8 +24,8 @@
                 </div>
 
                 <div class="texts" style="display: none;">
-                    <div class="texto"><a href="/" id="txt1" style="color: white; font-size: 16px; font-weight: bold;">HOME</a></div>
-                    <div class="texto"><a href="/media" id="txt2" style="color: white; font-size: 16px; font-weight: bold;">MEDIA</a></div>
+                    <div><a href="/" id="txt1" style="color: white; font-size: 16px; font-weight: bold;">HOME</a></div>
+                    <div><a href="/media" id="txt2" style="color: white; font-size: 16px; font-weight: bold;">MEDIA</a></div>
                 </div>    
             </div>
         </nav>
@@ -37,13 +37,10 @@
                     <input type="text" name="name" id="name" placeholder="File name" required>
                     <label for="name" class="formlabel" class="arqv">Nome do arquivo</label>
                 </div>
-                <label for="file-input" class="label-file" >
-                    Escolha um arquivo
-                  </label>
-                  <input type="file" id="file-input" class="input-file">
-                  <span class="file-text">Nenhum arquivo selecionado</span>
-                  <button class="submit-button" type="submit">Enviar</button>
-                <button type="submit" class="send"><p>Enviar</p></button>
+                <div class="formgrp"> 
+                    <input type="file" name="file" id="file"> 
+                </div>
+                <button type="submit" class="send">Enviar</button>
             </form>
         </div>
 

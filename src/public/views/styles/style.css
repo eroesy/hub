@@ -7,6 +7,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #434370;
 }
 
 label {
@@ -20,14 +21,6 @@ label {
     height: 100%;
 }
 
-.navbar {
-    display: flex;
-    width: 100%;
-    height: 7%;
-    background-color: rgb(24, 24, 24);
-    align-items: center;
-}
-
 .logo {
     cursor: pointer;
     flex-basis: 90%;
@@ -38,42 +31,6 @@ label {
     text-align: center;
     color: white;
     font-size: 20px;
-  
-}
-
-.resto {
-    display: flex;
-    width: 100%;
-    height: 30px;
-   
-    
-    
-}
-
-.resto > p{
-   padding-left: 100px;
-   color: white;
-
-   
- 
-}
-.resto > p > a{
-    color: white;
-    border-radius: 10px;
-    
-}
-
-.form {
-    display: flex;
-    width: 60%;
-    height: 80%;
-    background-color: rgb(240, 241, 228);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 3%;
-    justify-content: center;
 }
 
 form {
@@ -81,7 +38,13 @@ form {
     flex-direction: column;
     align-items: center;
     width: 50%;
+    height: 600px;
     background-color: rgb(24, 24, 24);
+    box-shadow: 6px 7px 6px 0px rgba(0, 0, 0, 0.603);
+    
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
 }
 
 form > button {
@@ -123,7 +86,7 @@ a {
     max-height: 35%;
     margin-left: 10px;
     margin-top: 10px;
-    background-color: rgba(255, 255, 0, 0.733);
+    background-color: rgba(22, 51, 214, 0.733);
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
@@ -138,22 +101,150 @@ a {
     max-height: 100%;
     margin-top: 10px;
 }
-nav.menu{
+
+.resto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 30px;
+    height: 100%;
+}
+
+.resto > p{
+   padding-left: 100px;
+   color: white;
+}
+.resto > p > a{
+    color: white;
+    border-radius: 10px;
+}
+
+nav.menu{
+    display: flex;
+    width: 100%;
+    height: 3%;
     background-color: rgb(59, 59, 57);
     transition: 0.5s;
     overflow: hidden;
 }
+
 nav.menu:hover{
-    height: 50px;
-    transition: 0.5s;
+    height: 5%;
+    transition: 0.5s; 
+}
 
-    
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 7%;
+    background-color: rgb(24, 24, 24);
+    align-items: center;
+    justify-content: center;
 }
-#img1,#img2{
-    padding-right: 150px;
+
+.icons, .texts {
+    display: flex;
+    width: 15%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.texts > a, .icons > a {
+    color: white;
+}
+
+.formgrp{
+    margin: 12px 0;
+    position: relative;
+}
+
+#name{
+    padding: 8px 20px;
+    font-size: 18px;
+    background-color: transparent;
+    border: #acacac solid 2px;
+    border-radius: 5px;
+}
+
+input#name::placeholder{
+    color: transparent;
+
+}
+.formgrp .formlabel {border-color: #eee }
+
+.formgrp .formlabel{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #acacac;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+
+.formgrp input:focus+ .formlabel{
+    color: #eee;
+    transform: translate(5px, -23px);
+    background-color: rgb(24, 24, 24);
+}
+.send{
+    border-radius: 5px;
+    background-color: transparent;
+    width: 110px;
+    border: #acacac solid 2px;
+    color: white;
+   
+     
+}    
+.send:hover{
+
+}
+.arqv{
+   background-color: transparent;
+}
+
+/* Estilize o rótulo do input */
+.label-file {
+    display: inline-block;
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto branca */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
   
-
-
+  .label-file:hover {
+    background-color: #555; /* Cor de fundo mais escura ao passar o mouse */
+  }
+  
+  /* Oculte o input padrão do arquivo */
+  .input-file {
+    display: none;
+  }
+  
+  /* Estilize o texto exibido ao lado do botão de escolha de arquivo */
+  .file-text {
+    display: inline-block;
+    color: #333; /* Cor do texto do arquivo selecionado */
+    margin-left: 10px;
+  }
+  
+  /* Estilize o botão de envio (opcional) */
+  .submit-button {
+    display: inline-block;
+    background-color: #0077b6; /* Cor do botão de envio */
+    color: #fff; /* Cor do texto do botão de envio */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #005d91; /* Cor de fundo mais escura ao passar o mouse */
+  }
+  
